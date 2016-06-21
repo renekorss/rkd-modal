@@ -61,6 +61,9 @@ $(function() {
       if(selector){
         data = $(data).find(selector);
       }
+      else if($(data).find('.rkd-modal-content')){
+        data = $(data).find('.rkd-modal-content');
+      }
 
       // Set loaded content to our modal
       $modal.find('.modal-content').html(data);
