@@ -1,0 +1,32 @@
+{
+  "name": "rkd-modal",
+  "homepage": "https://github.com/renekorss/rkd-modal",
+  "authors": [
+    "Rene Korss <rene.korss@gmail.com>"
+  ],
+  "description": "Plain content and AJAX supported modal.",
+  "main": [
+    "./dist/rkd-modal.min.js",
+    "./dist/rkd-modal.min.css"
+  ],
+  "moduleType": [],
+  "keywords": [
+    "modal",
+    "popup",
+    "ajax"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^2.2.4",
+    "bourbon": "~4.2.7",
+    "neat": "~1.7.4",
+    "SpinKit": "spinkit#~1.2.5"
+  }
+}
