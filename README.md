@@ -15,7 +15,7 @@ See [example](src/example/index.html).
 
 ````html
 <a
-  href="http://cors.io/?u=http://example.com"
+  href="http://cors.io/?http://example.com"
   class="rkd-modal-ajax"
   data-rkd-modal-selector="p"
 >Open ajax modal</a>
