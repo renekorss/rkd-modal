@@ -24,7 +24,7 @@ $(function() {
   });
 
   // Modal ajax link
-  $(document).on("click", ".rkd-modal-ajax", function(e) {
+  $(document).on("click", ".rkd-modal-ajax, .rkd-modal-this", function(e) {
     e.preventDefault();
     var $modal;
     var id = $(this).data('rkd-modal-id');
@@ -40,15 +40,25 @@ $(function() {
       $(this).data('rkd-modal-id', $modal.attr('id'));
     }
 
+    var $loading = $modal.find('.loading');
+
     // Open modal
     $modal.find('input.modal-state').prop('checked', true);
+
+    // Take content inside of this element
+    if ($(this).hasClass('rkd-modal-this')){
+      // Set loaded content to our modal
+      $modal.find('.modal-content').html($(this).html());
+      // Hide loader
+      $loading.hide();
+      return;
+    }
 
     // Check if content is already loaded?
     if($modal.hasClass('content-loaded')){
       return;
     }
 
-    var $loading = $modal.find('.loading');
     var selector = $(this).data('rkd-modal-selector');
 
     // Show loader
