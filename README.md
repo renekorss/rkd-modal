@@ -29,6 +29,12 @@ That's it!
 
 - `data-rkd-modal-selector` (optional): jQuery selector which content will be loaded from requested URL.
 
+### Content modal with current item contents
+
+````html
+<a href="#" class="rkd-modal-this">This content will be displayed in modal</a>
+````
+
 ### Content modal
 
 **Create a link to modal**
