@@ -133,3 +133,8 @@
 }
 
 // Based on code by Kasper Mikiewicz
+
+// Make sure our model is visible (conflict with Bootstrap)
+.modal-open .modal{
+  display: block;
+}
