@@ -43,7 +43,7 @@ $(function() {
     var $loading = $modal.find('.loading');
 
     // Open modal
-    $modal.find('input.modal-state').prop('checked', true);
+    $modal.find('input.modal-state').prop('checked', true).change();
 
     // Take content inside of this element
     if ($(this).hasClass('rkd-modal-this')){

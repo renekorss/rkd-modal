@@ -127,3 +127,5 @@ html {
 
 .modal-open {
   overflow: hidden; }
+  .modal-open .modal {
+    display: block; }

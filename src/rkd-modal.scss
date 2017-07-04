@@ -130,11 +130,10 @@
 
 .modal-open{
   overflow: hidden;
-}
 
+  // Make sure our modal is visible (conflict with Bootstrap)
+  .modal{
+    display: block;
+  }
+}
 // Based on code by Kasper Mikiewicz
-
-// Make sure our model is visible (conflict with Bootstrap)
-.modal-open .modal{
-  display: block;
-}
