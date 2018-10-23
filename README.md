@@ -3,11 +3,11 @@ Plain content and AJAX supported modal.
 
 # Install
 
-`bower install rkd-modal`
+`npm install rkd-modal`
 
 # How to use?
 
-See [example](src/example/index.html).
+See [example HTML](src/example/index.html) and [JSFiddle](https://jsfiddle.net/ReneKorss/m3vLr09u/).
 
 ### AJAX modal
 
@@ -15,7 +15,7 @@ See [example](src/example/index.html).
 
 ````html
 <a
-  href="http://cors.io/?http://example.com"
+  href="https://cors.io/?http://example.com/"
   class="rkd-modal-ajax"
   data-rkd-modal-selector="p"
 >Open ajax modal</a>
