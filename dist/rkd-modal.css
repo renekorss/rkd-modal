@@ -1,3 +1,13 @@
+/**
+ * RKD Modal main SCSS file
+ *
+ * @author Rene Korss <rene.korss@gmail.com>
+ */
+/**
+ * RKD Modal imports SCSS file
+ *
+ * @author Rene Korss <rene.korss@gmail.com>
+ */
 html {
   box-sizing: border-box; }
 
@@ -36,6 +46,11 @@ html {
   40% {
     transform: scale(1); } }
 
+/**
+ * RKD Modal styles SCSS file
+ *
+ * @author Rene Korss <rene.korss@gmail.com>
+ */
 .modal label {
   cursor: pointer;
   margin-bottom: 0; }

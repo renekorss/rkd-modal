@@ -22,11 +22,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "devDependencies": {
-    "jquery": "^2.2.4",
-    "bourbon": "~4.2.7",
-    "neat": "~1.7.4",
-    "SpinKit": "spinkit#~1.2.5"
-  }
+  ]
 }

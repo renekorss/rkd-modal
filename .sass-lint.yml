@@ -61,7 +61,7 @@ rules:
     - convention: hyphenatedlowercase
   indentation:
     - 2
-    - size: 2
+    - size: 4
   leading-zero:
     - 1
     - include: false

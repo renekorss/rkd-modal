@@ -43,13 +43,16 @@ module.exports = function(grunt) {
     sass: {
       build: {
         options: {
+          includePaths: [
+            'node_modules/'
+          ],
           style: 'expanded',
           sourcemap: 'none'
         },
         files: [{
           expand: true,
           cwd: 'src/',
-          src: '*.scss',
+          src: 'rkd-modal.scss',
           dest: 'dist/',
           ext: '.css'
         }]
