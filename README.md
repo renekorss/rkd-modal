@@ -1,3 +1,6 @@
+![npm](https://img.shields.io/npm/dt/rkd-modal.svg)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 # RKD Modal
 Plain content and AJAX supported modal.
 
