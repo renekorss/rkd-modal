@@ -40,7 +40,8 @@
     "load-grunt-tasks": "^3.5.0",
     "sass-lint": "^1.12.1",
     "spinkit": "^1.2.5",
-    "bourbon-neat": "^1.9.1"
+    "bourbon-neat": "^1.9.1",
+    "merge": ">=1.2.1"
   },
   "dependencies": {}
 }
