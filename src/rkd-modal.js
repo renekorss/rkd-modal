@@ -20,7 +20,7 @@ $(function() {
   // Simple content modal
   $(document).on("click", ".rkd-modal", function(e) {
     e.preventDefault();
-    $('#'+$(this).data('rkd-modal-id')+' input.modal-state').prop('checked', true);
+    $('#'+$(this).data('rkd-modal-id')+' input.modal-state').prop('checked', true).trigger('change');
   });
 
   // Modal ajax link
