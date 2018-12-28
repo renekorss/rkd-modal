@@ -1,16 +1,18 @@
 $(function() {
-  // Open / close modal state
-  $(document).on("change", ".modal-state", function() {
-    if ($(this).is(":checked")) {
-      $("body").addClass("modal-open");
-    } else {
-      $("body").removeClass("modal-open");
-    }
-  });
+  var openModal = function($modal) {
+    $modal.addClass('modal-open');
+    $modal.find('input.modal-state').prop('checked', true).trigger('change');
+  };
+
+  var closeModal = function($modal) {
+    $modal.removeClass('modal-open');
+    $modal.find('input.modal-state').prop('checked', false).trigger('change');
+  };
 
   // Close modal on close button and clicking outside of modal
   $(document).on("click", ".modal-fade-screen, .modal-close", function() {
-    $(".modal-state:checked").prop("checked", false).change();
+    var $modal = $(this).closest('.modal');
+    closeModal($modal);
   });
 
   $(document).on("click", ".modal-inner", function(e) {
@@ -20,7 +22,8 @@ $(function() {
   // Simple content modal
   $(document).on("click", ".rkd-modal", function(e) {
     e.preventDefault();
-    $('#'+$(this).data('rkd-modal-id')+' input.modal-state').prop('checked', true).trigger('change');
+    var $modal = $('#'+$(this).data('rkd-modal-id'));   
+    openModal($modal);
   });
 
   // Modal ajax link
@@ -43,7 +46,7 @@ $(function() {
     var $loading = $modal.find('.loading');
 
     // Open modal
-    $modal.find('input.modal-state').prop('checked', true).change();
+    openModal($modal);
 
     // Take content inside of this element
     if ($(this).hasClass('rkd-modal-this')){

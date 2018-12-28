@@ -22,6 +22,10 @@
     $modal-image-width: $modal-image-height !default;
     $modal-trigger-image-width: 300px !default;
 
+    &.modal-open{
+        display: block;
+    }
+
     label{
         cursor: pointer;
         margin-bottom: 0;
@@ -126,15 +130,6 @@
         .modal-content{
 
         }
-    }
-}
-
-.modal-open{
-    overflow: hidden;
-
-    // Make sure our modal is visible (conflict with Bootstrap)
-    .modal{
-        display: block;
     }
 }
 // Based on code by Kasper Mikiewicz

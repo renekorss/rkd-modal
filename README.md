@@ -1,4 +1,4 @@
-![npm](https://img.shields.io/npm/dt/rkd-modal.svg)
+[![npm](https://img.shields.io/npm/dt/rkd-modal.svg)](https://www.npmjs.com/package/rkd-modal)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 # RKD Modal
