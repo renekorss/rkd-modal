@@ -12,7 +12,7 @@ Plain content and AJAX supported modal.
 
 See [example HTML](src/example/index.html) and [JSFiddle](https://jsfiddle.net/ReneKorss/m3vLr09u/).
 
-### AJAX modal
+## AJAX modal
 
 **Create a link to modal**
 
@@ -26,19 +26,19 @@ See [example HTML](src/example/index.html) and [JSFiddle](https://jsfiddle.net/R
 
 That's it!
 
-#### Options
+### Options
 
 `data` attributes:
 
 - `data-rkd-modal-selector` (optional): jQuery selector which content will be loaded from requested URL.
 
-### Content modal with current item contents
+## Content modal with current item contents
 
 ````html
 <a href="#" class="rkd-modal-this">This content will be displayed in modal</a>
 ````
 
-### Content modal
+## Content modal
 
 **Create a link to modal**
 
@@ -63,11 +63,41 @@ That's it!
 </div>
 ````
 
-#### Options
+### Options
 
 `data` attributes:
 
 - `data-rkd-modal-id` (required): custom modal ID. Must be unique.
+
+# Events
+
+**Possible events:**
+
+- `rkd-modal:before:open`
+- `rkd-modal:after:open`
+- `rkd-modal:before:close`
+- `rkd-modal:after:close`
+
+Events are fired on `$(document)` object, so listen like this:
+
+````javascript
+$(document).on('rkd-modal:before:open', function(e, $modal) {
+  // Do whatever you need
+  // $modal is jQuery object representing current modal
+});
+````
+
+# Disable ESC key from closing modal
+
+Just create `window.rkdModal` global object and set `escKey` to `false`.
+
+````javascript
+window.rkdModal = {
+  escKey: false
+};
+````
+
+It gets validated on every modal open, so you could change this setting whenever you need.
 
 # Customise
 
