@@ -1,12 +1,42 @@
+/**
+ * Escape key keyCode
+ */
+var ESC_KEY = 27;
+var ESC_KEY_NAMESPACE = 'rkd-modal-escape';
+var isEscKeyEnabled = function() {
+  return !window.rkdModal || window.rkdModal.escKey;
+};
+
 $(function() {
   var openModal = function($modal) {
+    $(document).trigger('rkd-modal:before:open', $modal);
+
     $modal.addClass('modal-open');
     $modal.find('input.modal-state').prop('checked', true).trigger('change');
+
+    if (isEscKeyEnabled()) {
+      $(document).on('keyup.'+ESC_KEY_NAMESPACE, function(e) {
+        if (e.keyCode === ESC_KEY) {
+          closeModal($modal);
+        }
+      });
+    }
+
+    $(document).trigger('rkd-modal:after:open', $modal);
   };
 
   var closeModal = function($modal) {
+    $(document).trigger('rkd-modal:before:close', $modal);
+
     $modal.removeClass('modal-open');
     $modal.find('input.modal-state').prop('checked', false).trigger('change');
+
+    // Remove ESC key listener
+    if (isEscKeyEnabled()) {
+      $(document).unbind('keyup.'+ESC_KEY_NAMESPACE);
+    }
+
+    $(document).trigger('rkd-modal:after:close', $modal);
   };
 
   // Close modal on close button and clicking outside of modal
