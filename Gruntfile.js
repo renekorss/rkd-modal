@@ -24,6 +24,9 @@ module.exports = function(grunt) {
     // Minifies the javascript files.
     uglify: {
         build: {
+            options: {
+                sourceMap: true
+            },
             files: [{
                 expand: true,
                 cwd: 'dist/',
