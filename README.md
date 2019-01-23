@@ -1,5 +1,6 @@
 [![npm version](https://badge.fury.io/js/rkd-modal.svg)](https://badge.fury.io/js/rkd-modal)
 [![npm](https://img.shields.io/npm/dt/rkd-modal.svg)](https://www.npmjs.com/package/rkd-modal)
+[![Known Vulnerabilities](https://snyk.io/test/github/renekorss/rkd-modal/badge.svg?targetFile=package.json)](https://snyk.io/test/github/renekorss/rkd-modal?targetFile=package.json)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 # RKD Modal
