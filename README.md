@@ -20,9 +20,9 @@ See [example HTML](src/example/index.html) and [JSFiddle](https://jsfiddle.net/R
 
 ````html
 <a
-  href="https://cors.io/?http://example.com/"
-  class="rkd-modal-ajax"
-  data-rkd-modal-selector="p"
+    href="https://cors.io/?http://example.com/"
+    class="rkd-modal-ajax"
+    data-rkd-modal-selector="p"
 >Open ajax modal</a>
 ````
 
@@ -53,15 +53,15 @@ That's it!
 ````html
 <!-- Content modal -->
 <div class="modal" id="modal-content">
-  <input class="modal-state" type="checkbox" />
-  <div class="modal-fade-screen">
-    <div class="modal-inner">
-      <div class="modal-close"></div>
-      <h1>Modal Title</h1>
-      <p class="modal-intro">Intro text</p>
-      <p class="modal-content">Body text</p>
+    <input class="modal-state" type="checkbox" />
+    <div class="modal-fade-screen">
+        <div class="modal-inner">
+            <div class="modal-close"></div>
+            <h1>Modal Title</h1>
+            <p class="modal-intro">Intro text</p>
+            <p class="modal-content">Body text</p>
+        </div>
     </div>
-  </div>
 </div>
 ````
 
@@ -79,13 +79,14 @@ That's it!
 - `rkd-modal:after:open`
 - `rkd-modal:before:close`
 - `rkd-modal:after:close`
+- `rkd-modal:content:loaded`
 
 Events are fired on `$(document)` object, so listen like this:
 
 ````javascript
 $(document).on('rkd-modal:before:open', function(e, $modal) {
-  // Do whatever you need
-  // $modal is jQuery object representing current modal
+    // Do whatever you need
+    // $modal is jQuery object representing current modal
 });
 ````
 
@@ -95,7 +96,7 @@ Just create `window.rkdModal` global object and set `escKey` to `false`.
 
 ````javascript
 window.rkdModal = {
-  escKey: false
+    escKey: false
 };
 ````
 

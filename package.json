@@ -26,11 +26,12 @@
   "homepage": "https://github.com/renekorss/rkd-modal#readme",
   "devDependencies": {
     "bourbon": "^4.3.4",
+    "bourbon-neat": "^1.9.1",
     "grunt": "^1.0.3",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^1.0.1",
-    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "^1.1.0",
@@ -38,10 +39,9 @@
     "grunt-sass-lint": "^0.1.0",
     "jquery": "^3.3.1",
     "load-grunt-tasks": "^3.5.0",
+    "merge": ">=1.2.1",
     "sass-lint": "^1.12.1",
-    "spinkit": "^1.2.5",
-    "bourbon-neat": "^1.9.1",
-    "merge": ">=1.2.1"
+    "spinkit": "^1.2.5"
   },
   "dependencies": {}
 }
