@@ -15,6 +15,8 @@ cache:
     - ~/.cache
 install:
   - npm ci
+before_script:
+  # & in the end is important so it will run in background
+  - $(npm bin)/node-http-server &
 script:
-  - $(npm bin)/node-http-server
   - $(npm bin)/cypress run --record
