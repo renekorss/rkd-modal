@@ -19,4 +19,4 @@ before_script:
   # & in the end is important so it will run in background
   - $(npm bin)/node-http-server &
 script:
-  - $(npm bin)/cypress run --record
+  - $(npm bin)/cypress run --record --key 801470fa-4c7d-4179-993c-c7755f845daa
