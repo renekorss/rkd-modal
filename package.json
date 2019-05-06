@@ -4,7 +4,8 @@
   "description": "Plain content and AJAX supported modal.",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/cypress open",
+    "serve": "./node_modules/.bin/http-server ./"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
   "devDependencies": {
     "bourbon": "^4.3.4",
     "bourbon-neat": "^1.9.1",
-    "grunt": "^1.0.3",
+    "cypress": "^3.2.0",
+    "grunt": "^1.0.4",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^1.0.1",
@@ -37,10 +39,11 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^1.1.0",
     "grunt-sass-lint": "^0.1.0",
-    "jquery": "^3.3.1",
+    "http-server": "^0.11.1",
+    "jquery": "^3.4.1",
     "load-grunt-tasks": "^3.5.0",
     "merge": ">=1.2.1",
-    "sass-lint": "^1.12.1",
+    "sass-lint": "^1.13.1",
     "spinkit": "^1.2.5"
   },
   "dependencies": {}
