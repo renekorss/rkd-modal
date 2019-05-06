@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/renekorss/rkd-modal.svg?branch=master)](https://travis-ci.org/renekorss/rkd-modal)
 [![npm version](https://badge.fury.io/js/rkd-modal.svg)](https://badge.fury.io/js/rkd-modal)
 [![npm](https://img.shields.io/npm/dt/rkd-modal.svg)](https://www.npmjs.com/package/rkd-modal)
 [![Known Vulnerabilities](https://snyk.io/test/github/renekorss/rkd-modal/badge.svg?targetFile=package.json)](https://snyk.io/test/github/renekorss/rkd-modal?targetFile=package.json)
@@ -90,17 +91,18 @@ $(document).on('rkd-modal:before:open', function(e, $modal) {
 });
 ````
 
-# Disable ESC key from closing modal
+# Configure what actions closes modal
 
-Just create `window.rkdModal` global object and set `escKey` to `false`.
+Just create `window.rkdModal` global object and set config as you wish.
 
 ````javascript
 window.rkdModal = {
-    escKey: false
+    escKey: false, // Disable/enable ESC key from closing modal. Default: true
+    backgroundClickClose: false // Disable/enable background click from closing modal. Default: true
 };
 ````
 
-It gets validated on every modal open, so you could change this setting whenever you need.
+It gets validated on every modal open, so you could change these settings whenever you need.
 
 # Customise
 

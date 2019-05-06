@@ -3,8 +3,31 @@
  */
 var ESC_KEY = 27;
 var ESC_KEY_NAMESPACE = 'rkd-modal-escape';
+
+/**
+ * Get global rkdModal config value by key
+ *
+ * @param {string} key Key to retrieve value for
+ *
+ * @return {mixed}
+ */
+var getRkdConfig = function(key) {
+    if (!window.rkdModal || !(key in window.rkdModal)) {
+        return null;
+    }
+
+    return window.rkdModal[key];
+};
+
+/**
+ * Detect if ESC key should close modal
+ *
+ * Default: true
+ *
+ * @return {boolean} True if closing withg ESC key is enabled
+ */
 var isEscKeyEnabled = function() {
-    return !window.rkdModal || window.rkdModal.escKey;
+    return getRkdConfig('escKey') === null ? true : getRkdConfig('escKey') !== false;
 };
 
 $(function() {
@@ -40,9 +63,19 @@ $(function() {
     };
 
     // Close modal on close button and clicking outside of modal
-    $(document).on("click", ".modal-fade-screen, .modal-close", function() {
+    $(document).on("click", ".modal-fade-screen, .modal-close", function(e) {
         var $modal = $(this).closest('.modal');
-        closeModal($modal);
+
+        var close = true;
+
+        // Detect if background click should close modal
+        if ($(e.target).is('.modal-fade-screen') && getRkdConfig('backgroundClickClose') === false) {
+            close = false;
+        }
+
+        if (close) {
+            closeModal($modal);
+        }
     });
 
     $(document).on("click", ".modal-inner", function(e) {
