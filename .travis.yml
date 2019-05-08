@@ -19,4 +19,4 @@ before_script:
   # & in the end is important so it will run in background
   - $(npm bin)/node-http-server &
 script:
-  - $(npm bin)/cypress run --record --key ${CYPRESS_KEY}
+  - $(npm bin)/cypress run --record --key ${CYPRESS_KEY} --config video=false
