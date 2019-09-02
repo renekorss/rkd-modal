@@ -20,4 +20,4 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: $(npm bin)/node-http-server &
-      - run: npm test
+      - run: npm test-ci
