@@ -21,3 +21,5 @@ jobs:
       - run: npm ci
       - run: $(npm bin)/node-http-server &
       - run: npm run test-ci
+        env:
+            CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_KEY}}
