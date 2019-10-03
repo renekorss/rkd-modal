@@ -4,7 +4,7 @@
   "description": "Plain content and AJAX supported modal.",
   "main": "Gruntfile.js",
   "scripts": {
-    "test-ci": "./node_modules/.bin/cypress run --config video=false",
+    "test-ci": "./node_modules/.bin/cypress run --config video=false --record",
     "test": "./node_modules/.bin/cypress open",
     "serve": "./node_modules/.bin/node-http-server"
   },
