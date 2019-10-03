@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/renekorss/rkd-modal.svg?branch=master)](https://travis-ci.org/renekorss/rkd-modal)
+[![Actions Status](https://github.com/renekorss/rkd-modal/workflows/build/badge.svg)](https://github.com/renekorss/rkd-modal/actions)
 [![npm version](https://badge.fury.io/js/rkd-modal.svg)](https://badge.fury.io/js/rkd-modal)
 [![npm](https://img.shields.io/npm/dt/rkd-modal.svg)](https://www.npmjs.com/package/rkd-modal)
 [![Known Vulnerabilities](https://snyk.io/test/github/renekorss/rkd-modal/badge.svg?targetFile=package.json)](https://snyk.io/test/github/renekorss/rkd-modal?targetFile=package.json)
