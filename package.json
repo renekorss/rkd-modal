@@ -1,6 +1,6 @@
 {
   "name": "rkd-modal",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "Plain content and AJAX supported modal.",
   "main": "Gruntfile.js",
   "scripts": {
